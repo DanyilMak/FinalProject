@@ -1,0 +1,8 @@
+fastapi[all]
+playwright
+beautifulsoup4
+sqlalchemy
+alembic
+statsmodels
+psycopg2-binary
+python-dotenv
