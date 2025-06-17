@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.api.routes import platforms, products, scraped_data, scraping
+from app.api.routes import platforms, products, scraped_data, scraping, regression
 
 app = FastAPI(
     title="Final Project - Price Analyzer",
@@ -10,3 +10,4 @@ app.include_router(platforms.router, prefix="/platforms", tags=["Platforms"])
 app.include_router(products.router, prefix="/products", tags=["Products"])
 app.include_router(scraped_data.router, prefix="/scraped", tags=["Scraped Data"])
 app.include_router(scraping.router, prefix="/scrape", tags=["Scraping"])
+app.include_router(regression.router, prefix="/regression", tags=["Regression"])
