@@ -17,7 +17,7 @@ def get_db():
 
 @router.post("/train/")
 def train(platform_id: int, db: Session = Depends(get_db)):
-    features = ["price", "reviews_count", "rating"]
+    features = ["price"]
     result = train_model(db, platform_id, target="search_position", features=features)
     if not result:
         raise HTTPException(status_code=400, detail="Недостатньо даних для навчання моделі")
